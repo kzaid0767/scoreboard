@@ -1,0 +1,73 @@
+@font-face{
+    font-family:'digital-clock-font';
+    src: url('digital-7/digital-7.ttf');
+   }
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    background-color: #1752BF;
+    border-radius: 15px;
+    border: rgb(191, 189, 218) solid 10px;
+    width: 600px;
+    height: 440px;
+    margin: auto;
+}
+
+#newGame{
+    height: 100px;
+    width: 150px;
+    margin-top: 200px;
+}
+
+.cont-h3 {
+    
+    width: 149px;
+    height: 36px;
+    
+
+    font-family: 'Verdana';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    /* identical to box height, or 90% */
+
+    text-align: center;
+
+    color: #EEEEEE;
+}
+
+.scorediv{
+    
+    width: 155px;
+    height: 120px;
+    font-family: 'digital-clock-font';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 90px;
+    text-align: center;
+    background-color: black;
+    color: #F94F6D;
+    margin-bottom: 13px;
+    border-radius: 10px;
+}
+
+.divbutton{
+    
+    display: flex;
+    justify-content: space-between;
+    width: 155px;
+    height: 45px;
+    margin-top: 13px;
+    
+}
+
+button{
+    width: 45px;
+    font-family: 'digital-clock-font';
+    background: 0;
+    border:#EEEEEE solid 2px;
+    border-radius: 5px;
+    color: #EEEEEE;
+    font-size: 30px;
+}
