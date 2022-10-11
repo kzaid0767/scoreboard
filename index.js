@@ -60,5 +60,3 @@ function gameLeader(score1, score2){
         guestSpan.style.color = '#F94F6D'
     }
 }
-
-//gameLeader(homeScore, guestScore)
