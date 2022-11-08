@@ -3,38 +3,23 @@ let guestScore=0
 let homeSpan = document.getElementById("homeSpan")
 let guestSpan = document.getElementById("guestSpan")
 
-function add1(){
-    homeScore +=1
+document.addEventListener('click', add)
+
+function add(e){
+    if(e.target.dataset.add==='h1'){
+        homeScore +=1
+    } else if (e.target.dataset.add==='h2'){
+        homeScore +=2
+    } else if (e.target.dataset.add==='h3'){
+        homeScore +=3
+    } else if (e.target.dataset.add==='g1'){
+        guestScore +=1
+    } else if (e.target.dataset.add==='g2'){
+        guestScore +=2
+    } else if (e.target.dataset.add==='g3'){
+        guestScore +=3
+    }
     homeSpan.textContent = homeScore
-    gameLeader(homeScore, guestScore)
-}
-
-function add2(){
-    homeScore +=2
-    homeSpan.textContent = homeScore
-    gameLeader(homeScore, guestScore)
-}
-
-function add3(){
-    homeScore +=3
-    homeSpan.textContent = homeScore
-    gameLeader(homeScore, guestScore)
-}
-
-function gadd1(){
-    guestScore +=1
-    guestSpan.textContent = guestScore
-    gameLeader(homeScore, guestScore)
-}
-
-function gadd2(){
-    guestScore +=2
-    guestSpan.textContent = guestScore
-    gameLeader(homeScore, guestScore)
-}
-
-function gadd3(){
-    guestScore +=3
     guestSpan.textContent = guestScore
     gameLeader(homeScore, guestScore)
 }
