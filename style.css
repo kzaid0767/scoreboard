@@ -4,7 +4,7 @@ body{
 
 .container{
     /* width: 95vw; */
-    margin: 0 auto;
+    margin-top: 3rem;
     display: flex;
     justify-content: space-around;
 }
@@ -13,19 +13,31 @@ body{
 .title{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: #EEEEEE;
-    text-transform: uppercase;                                           
+    text-transform: uppercase;
+    margin: 0;
+    text-align: center;                                           
 }
 
 .scorebox{
     font-family: 'Cursed Timer ULiL', sans-serif;
     background-color: #080001;
     color: #F94F6D;
-    text-align: center;      
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    padding-top: 0.5rem;
+    width: 9.7rem;    
 }
 
 .btn-container{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    width: 9.7rem;
+    /* padding-left: 0.5rem;  */
+    padding-right: 0.5rem; 
+
 }
 
 .point-btn{
@@ -34,5 +46,6 @@ body{
     border: 0.1rem solid #9AABD8;
     border-radius: 0.1rem;
     padding: 0.2rem 0.4rem;
+    width: 2rem;
 
 }
