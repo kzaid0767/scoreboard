@@ -1,16 +1,20 @@
 body{
     background-color: #1B244A;
+    min-width: 365px;
 }
 
 .container{
     /* width: 95vw; */
     margin-top: 3rem;
+    margin-left: auto;
+    margin-right: auto;
     display: flex;
     justify-content: space-around;
+    max-width: 500px;
 }
 
-/* fonts */
-.title{
+
+.title, .fouls-count{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: #EEEEEE;
     text-transform: uppercase;
@@ -26,18 +30,22 @@ body{
     align-items: center;
     display: flex;
     font-size: 3rem;
-    margin-bottom: 0.5rem;
+    margin: 1rem 0;
     padding-top: 0.5rem;
-    width: 9.7rem;    
+    width: 9.7rem;
+    height: 7.5rem;
+    border-radius: 0.3125rem;    
+}
+
+.leader{
+    color: green;
 }
 
 .btn-container{
     display: flex;
     justify-content: space-between;
-    width: 9.7rem;
-    /* padding-left: 0.5rem;  */
-    padding-right: 0.5rem; 
-
+    margin-bottom: 1rem;
+    
 }
 
 .point-btn{
@@ -46,6 +54,53 @@ body{
     border: 0.1rem solid #9AABD8;
     border-radius: 0.1rem;
     padding: 0.2rem 0.4rem;
-    width: 2rem;
+    width: 2.8125rem;
+    height: 2.8125rem;
+    font-size: 1.5rem;
+    font-family: 'Cursed Timer ULiL', sans-serif;
+    border-radius: 0.3125rem;    
+}
 
+.bottom-section{
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+    max-width: 500px;
+    
+}
+
+
+/*Bottom Section */
+
+.fouls, .period{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.period-container, .fouls-container{
+    font-family: 'Cursed Timer ULiL', sans-serif;
+    background-color: #080001;
+    color: #F94F6D;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-size: 3rem;
+    margin: 1rem 0;
+    padding-top: 0.5rem;
+    width: 4.7rem;
+    height: 3.5rem;
+    border-radius: 0.3125rem; 
+}
+.fouls-btns {
+    color: #9AABD8;
+    background: none;
+    border: 0.1rem solid #9AABD8;
+    border-radius: 0.1rem;
+    padding: 0.2rem 0.4rem;
+    width: 2rem;
+    height: 2rem;
+    font-size: 1rem;
+    font-family: 'Cursed Timer ULiL', sans-serif;
+    border-radius: 0.3125rem; 
 }

@@ -1,9 +1,18 @@
 document.addEventListener('click',handleClick)
 
 const homeScoreBox = document.querySelector('#homeScoreBox')
+const guestScoreBox = document.querySelector('#guestScoreBox')
+const homeFoulsBox = document.querySelector('#home-fouls')
+const guestFoulsBox = document.querySelector('#guest-fouls')
+const periodBox = document.querySelector('#period-container')
+
 
 let homeScore=0
 let guestScore=0
+let homeFouls=0
+let guestFouls=0
+let period=0
+let time=1500
 
 function handleClick(e){
     const idCheck = e.target.id
@@ -29,4 +38,43 @@ function handleClick(e){
     }
     homeScoreBox.textContent = homeScore
     guestScoreBox.textContent = guestScore
+
+
+    if(homeScore>guestScore){
+        guestScoreBox.classList.remove('leader')
+        homeScoreBox.classList.add('leader')
+    } else if (guestScore>homeScore){
+        homeScoreBox.classList.remove('leader')
+        guestScoreBox.classList.add('leader')
+    } else {
+        homeScoreBox.classList.remove('leader')
+        guestScoreBox.classList.remove('leader')
+    }
+
+    if(idCheck=='homeFoulsMinus' && homeFouls>0){
+        homeFouls--
+        homeFoulsBox.textContent = homeFouls
+    }
+    if(idCheck=='homeFoulsPlus'){
+        homeFouls++
+        homeFoulsBox.textContent = homeFouls
+    }
+    if(idCheck=='guestFoulsMinus' && guestFouls>0){
+        guestFouls--
+        guestFoulsBox.textContent = guestFouls
+    }
+    if(idCheck=='guestFoulsPlus'){
+        guestFouls++
+        guestFoulsBox.textContent = guestFouls
+    }
+
+    if(idCheck=='periodminus' && period>0){
+        period--
+        periodBox.textContent = period
+    }
+    if(idCheck=='periodplus'){
+        period++
+        periodBox.textContent = period
+    }
 }
+
