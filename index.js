@@ -5,6 +5,7 @@ const guestScoreBox = document.querySelector('#guestScoreBox')
 const homeFoulsBox = document.querySelector('#home-fouls')
 const guestFoulsBox = document.querySelector('#guest-fouls')
 const periodBox = document.querySelector('#period-container')
+const timeBox = document.querySelector('#time')
 
 
 let homeScore=0
@@ -12,10 +13,25 @@ let guestScore=0
 let homeFouls=0
 let guestFouls=0
 let period=0
-let time=1500
+let time=20
+let countdown //to take return value of setInterval
 
 function handleClick(e){
     const idCheck = e.target.id
+    if (idCheck=='start'){
+        timerRun()
+    }
+
+    if (idCheck=='pause'){
+        pauseTime()
+    }
+
+    if (idCheck=='reset'){
+        resetTime()
+    }
+
+    
+
     if(idCheck=='homeMinus' && homeScore >0){
         homeScore--
     }
@@ -78,3 +94,28 @@ function handleClick(e){
     }
 }
 
+function timerRun(){
+    if (!countdown){
+        countdown = setInterval(()=>{
+            if (time>0){
+                time--
+                timeBox.textContent = time
+            } else {
+                clearInterval(countdown)
+                countdown=null
+            }
+        },1000)
+    }
+}
+
+function pauseTime(){
+    clearInterval(countdown)
+    countdown = null
+}
+
+function resetTime(){
+    clearInterval(countdown)
+    countdown = null
+    time=20
+    timeBox.textContent = time
+}

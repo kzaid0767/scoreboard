@@ -32,8 +32,8 @@ body{
     font-size: 3rem;
     margin: 1rem 0;
     padding-top: 0.5rem;
-    width: 9.7rem;
-    height: 7.5rem;
+    width: 8.7rem;
+    height: 6.5rem;
     border-radius: 0.3125rem;    
 }
 
@@ -101,6 +101,39 @@ body{
     width: 2rem;
     height: 2rem;
     font-size: 1rem;
+    font-family: 'Cursed Timer ULiL', sans-serif;
+    border-radius: 0.3125rem; 
+}
+
+/* time sections */
+.timersection{
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.time{
+    font-family: 'Cursed Timer ULiL', sans-serif;
+    background-color: #080001;
+    color: #F94F6D;
+    
+    font-size: 3rem;
+    border-radius: 0.3125rem;
+    padding: 1rem;
+}
+.timercontrols{
+    margin: 1rem 0;
+}
+.timebutton{
+    color: #9AABD8;
+    background: none;
+    border: 0.1rem solid #9AABD8;
+    border-radius: 0.1rem;
+    padding: 0.3rem 0.4rem;
+    /* width: 2rem; */
+    height: 2rem;
+    font-size: 1.5rem;
     font-family: 'Cursed Timer ULiL', sans-serif;
     border-radius: 0.3125rem; 
 }
